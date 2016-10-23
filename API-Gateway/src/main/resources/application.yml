@@ -1,0 +1,42 @@
+server:
+  port: 8001
+  
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8761/eureka/
+        healthcheck:
+            enabled: true
+        lease:
+            duration: 5
+zuul:  
+  host:
+    socket-timeout-millis: 60000
+    
+    
+logging:
+    file:
+        ${APP_HOME}/logs/api_gateway.log
+
+spring:
+    application:
+      name: apigateway
+          
+ribbon:
+  ConnectTimeout: 60000
+  ReadTimeout: 600000
+  eureka:
+    enabled:
+      true
+  
+hystrix:
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: false
+                isolation:
+                    strategy: THREAD
+                    thread:
+                        timeoutInMilliseconds: 60000
+  
