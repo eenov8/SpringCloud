@@ -10,11 +10,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author Harman
+ * @author Anurag Jain
  *
  */
 @Configuration
-@ComponentScan({"com.entrust.administration.ui.services"})
+@ComponentScan({"com.eatrest.ui.service"})
 public class ContextConfig {
 	
 	@LoadBalanced
