@@ -3,7 +3,7 @@ var config = (function() {
         
         apiServer: function (){
 			var ip = location.protocol+'//'+location.hostname;
-			return ip+":8090/IndusRoot/";
+			return ip+":8090/EatRestCode/";
 
         }
     };
