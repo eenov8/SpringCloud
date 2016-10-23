@@ -1,15 +1,15 @@
 'use strict';
 
 /**
- * @class angular_module.indusModule.AddUserCtrl
+ * @class angular_module.ercModule.AddUserCtrl
  * @param  $scope {object} {@link https://docs.angularjs.org/guide/scope}
  * @param  Excel-Directive {object} {@link https://docs.angularjs.org/guide/directive}
  * @param $timeout {object} {@link https://docs.angularjs.org/api/ngMock/service/$timeout}
  * @return DashboardCtrl-Constructor Instance of DashboardCtrl 
- * @description Controller for controlling Home Page of Indus Root
+ * @description Controller for controlling Home Page of Eat Rest Code
  */
 
-indusModule
+ercModule
 .controller(
 		'AddUserCtrl',
 		[
@@ -34,7 +34,7 @@ indusModule
 			 /**
 			  * @function addUser
 			  * @name $scope.addUser
-			  * @memberOf angular_module.indusModule.AddUserCtrl
+			  * @memberOf angular_module.ercModule.AddUserCtrl
 			  * @description Creates User in Database
 			  */
 			 $scope.addUser = function(){

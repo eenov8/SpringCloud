@@ -3,12 +3,12 @@
 
 /**
  * @type Module
- * @class angular_module.indusModule
+ * @class angular_module.ercModule
  * @memberOf angular_module
- * @name indusModule
+ * @name ercModule
  */
 
-var indusModule = angular.module('indusApp', [ 'ngAnimate', 'ngRoute','ngCookies','ui.router.state', 'ui.bootstrap', 'ncy-angular-breadcrumb','datatables', 'ngResource' ])
+var ercModule = angular.module('ercApp', [ 'ngAnimate', 'ngRoute','ngCookies','ui.router.state', 'ui.bootstrap', 'ncy-angular-breadcrumb','datatables', 'ngResource' ])
 .config(function($breadcrumbProvider) {
 	$breadcrumbProvider.setOptions({
 		prefixStateName: 'home',
@@ -64,16 +64,16 @@ var indusModule = angular.module('indusApp', [ 'ngAnimate', 'ngRoute','ngCookies
 });
 
 /**
- * @class angular_module.indusModule
+ * @class angular_module.ercModule
  * @runnable
  * @param $rootScope {service} {@link https://docs.angularjs.org/api/ng/service/$rootScope}
  * @param  $route {service} {@link https://docs.angularjs.org/api/ngRoute/service/$route}
  * @param  $location {service} {@link https://docs.angularjs.org/api/ng/service/$location}
  * @param $cookieStore {service} {@link https://docs.angularjs.org/api/ngCookies/service/$cookieStore}
- * @description Init function for indusModule initiating rootScope and checkinf if user is logged in or not
+ * @description Init function for ercModule initiating rootScope and checkinf if user is logged in or not
  */
 
-indusModule.run(function($rootScope,$cookieStore,$route,$location) {
+ercModule.run(function($rootScope,$cookieStore,$route,$location) {
 	var userObj = $cookieStore.get('user');
 	$rootScope.loggedIn = false;
 	if(userObj == undefined || userObj.loggedIn == false){
@@ -92,12 +92,12 @@ indusModule.run(function($rootScope,$cookieStore,$route,$location) {
 
 
 /**
- * @class angular_module.indusModule
+ * @class angular_module.ercModule
  * @factory
  * @name Excel
  * @return 'Excel' named factory for downloading Excel sheet from table
  */
-indusModule.factory('Excel',function($window){
+ercModule.factory('Excel',function($window){
 	var uri='data:application/vnd.ms-excel;base64,',
 	template='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>',
 	base64=function(s){return $window.btoa(unescape(encodeURIComponent(s)));},

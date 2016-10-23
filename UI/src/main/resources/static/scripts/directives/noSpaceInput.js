@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @class angular_module.indusModule.ngFileChosen
+ * @class angular_module.ercModule.ngFileChosen
  * @param  $scope {object} {@link https://docs.angularjs.org/guide/scope}
  * @require ngModel {object} {@link https://docs.angularjs.org/api/ng/directive/ngModel}
  * @return DashboardCtrl-Constructor Instance of DashboardCtrl 
@@ -9,7 +9,7 @@
  */
 
 
-indusModule.directive('noSpace', function() {
+ercModule.directive('noSpace', function() {
     return {
         require: 'ngModel',
         link: function(scope, element, attrs, modelCtrl) {

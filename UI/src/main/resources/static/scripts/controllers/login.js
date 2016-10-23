@@ -4,9 +4,9 @@
  * Login Section Controller
  *
  * @type Controller
- * @module indusApp
+ * @module ercApp
  * @class LoginCtrl
- * @name indusApp.controller:LoginCtrl
+ * @name ercApp.controller:LoginCtrl
  * @param $scope {service} scope of controller
  * @param apiService {Factory} AJAX calling service
  * @param $location {service} Document location service
@@ -15,7 +15,7 @@
  */
 
 
-indusModule.controller('LoginCtrl',
+ercModule.controller('LoginCtrl',
 		[
 		 '$scope',
 		 '$location',

@@ -2,13 +2,13 @@
 
 /**
  * @function apiService
- * @memberOf angular_module.indusModule
+ * @memberOf angular_module.ercModule
  * @param $http {service} {@link https://docs.angularjs.org/api/ng/service/$http}
  * @description This service provides the API Interaction of UI with Server
  * @returns registered apiService provider instance with execute function for calling APIs
  */
 
-indusModule
+ercModule
 .factory(
 		'apiService',
 		[
@@ -40,7 +40,7 @@ indusModule
 						 break;
 					 }
 					 case 'fetchCSPAccount': {
-						 apiData.url = "https://localhost:8006/IndusRoot/CSP/Account/fetchCSPAccounts";
+						 apiData.url = "https://localhost:8006/CSP/Account/fetchCSPAccounts";
 						 apiData.type = "GET";
 						 break;
 					 }
