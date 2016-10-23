@@ -2,12 +2,6 @@ package com.eatrest.user.management.service.beans;
 
 public interface ERSConstants {
 
-	// Spring Required Constants.
-	public static final String APPLICATION_PROPERTIES_FILE_NAME = "entrust-application.properties";
-	public static final String CLASSPATH = "classpath:";
-	public static final String HTTP_HEADERS_FILE_NAME = "entrust-http-header.properties";
-	
-	// Extras
 	public static final String UTC = "UTC";
 	public static final String START_INDEX_KEY = "startIndex";
 	public static final String END_INDEX_KEY = "endIndex";

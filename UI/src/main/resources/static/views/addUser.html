@@ -1,0 +1,121 @@
+<div class="container-fluid">
+	<h2>Add User</h2>
+
+	<div class="col-md-12">
+		<div class="padding-right-5 padding-bottom-10 pull-right">
+				<a class="addBtn paddingForButton" href="#/">Cancel</a>
+		</div>
+		<div class="pull-right margin-right-10">
+				<a class="addBtn paddingForButton" href="javascript:void(0)" ng-click="addUser()">&nbsp;Save&nbsp;</a>
+		</div>
+		<div ng-show="login404Error" class="col-md-offset-4"
+			style="color: #FF0000">*Server is not reachable</div>
+		<div ng-show="loginError" class="col-md-offset-4"
+			style="color: #FF0000">*{{errorMessage}}</div>
+	</div>
+	<div class="row padding-top-20">
+		<div class="col-md-6 col-md-offset-3">
+			<form name="userForm" ng-submit="submitForm()" novalidate>
+				<!-- USERFIRSTNAME -->
+				<div class="form-group" style="overflow: auto;">
+					<label class="col-md-3 noMargin">First Name</label>
+					<div class="col-md-8">
+						<input type="text" name="name" class="form-control"
+							ng-model="user.firstName">
+						<div ng-if="emptyCol=='FirstName' && user.firstName==''"
+							style="color: #FF0000">Please enter first name.</div>
+						<div ng-if="emptyCol=='FirstName' && user.firstName.length > 20"
+							style="color: #FF0000">First name length should not exceed more than 20 characters.</div>
+					</div>
+				</div>
+				<!-- USERLASTNAME -->
+				<div class="form-group" style="overflow: auto;">
+					<label class="col-md-3 noMargin">Last Name</label>
+					<div class="col-md-8">
+						<input type="text" name="name" class="form-control"
+							ng-model="user.lastName">
+						<div ng-if="emptyCol=='LastName' && user.lastName==''"
+							style="color: #FF0000">Please enter last name.</div>
+						<div ng-if="emptyCol=='LastName' && user.lastName.length > 20"
+							style="color: #FF0000">Last name length should not exceed more than 20 characters.</div>
+					</div>
+				</div>
+
+				<!-- LOGINNAME -->
+
+				<div class="form-group" style="overflow: auto;">
+					<label class="col-md-3 noMargin">Login Name</label>
+					<div class="col-md-8">
+						<input type="text" name="name" class="form-control"
+							ng-model="user.loginName" ng-trim='false' no-space
+							ng-change="loginNameTextChanged()">
+						<div ng-if="emptyCol=='LoginName' && user.loginName==''"
+							style="color: #FF0000">Please enter login name.</div>
+						<div ng-if="emptyCol=='LoginName' && user.loginName.length > 20"
+							style="color: #FF0000">Login name length should not exceed more than 20 characters.</div>
+						<div ng-if="emptyCol==='loginNameVal' && loginNameVal=='wrongLoginVal'" style="color: #FF0000">Login
+							name should not contain any special characters.</div>
+					</div>
+				</div>
+
+				<!-- PASSWORD -->
+				<div class="form-group" style="overflow: auto;">
+					<label class="col-md-3 noMargin">Password</label>
+					<div class="col-md-8">
+						<input type="password" name="username" class="form-control"
+							ng-model="user.password" ng-minlength="3"
+							ng-change="textChanged()" ng-trim='false' no-space>
+						<div ng-if="emptyCol=='Password' && user.password==''"
+							style="color: #FF0000">Please enter password.</div>
+						<div ng-if="emptyCol==='passwordVal' && passwordVal=='wrongPwdVal'" style="color: #FF0000">Password
+							must contain Minimum 8 characters, at least 1 Uppercase Alphabet,
+							1 Lowercase Alphabet, 1 Number and 1 Special Character.</div>
+					</div>
+				</div>
+
+
+
+				<!-- EMAIL -->
+				<div class="form-group" style="overflow: auto;">
+					<label class="col-md-3 noMargin">Email</label>
+					<div class="col-md-8">
+						<input type="text" name="name" class="form-control"
+							ng-model="user.email" ng-change="emailTextChanged()"
+							ng-trim='false' no-space>
+						<div ng-if="emptyCol=='Email' && user.email==''"
+							style="color: #FF0000">Please enter the email id.</div>
+						<div ng-if="emptyCol==='emailVal' && emailVal=='wrongValue'"
+							style="color: #FF0000">Enter a valid email ID.</div>
+					</div>
+				</div>
+
+				<!-- ENTERPRISE -->
+				<div class="form-group" style="overflow: auto;">
+					<label class="col-md-3 noMargin">Enterprise</label>
+					<div class="col-md-8">
+						<input type="text" name="email" class="form-control"
+							ng-model="user.enterprise" ng-trim='false' no-space
+							ng-change="enterpriseTextChanged()">
+						<div ng-if="emptyCol=='Enterprise' && user.enterprise==''"
+							style="color: #FF0000">Please enter the Enterprise.</div>
+						<div ng-if="emptyCol==='enterpriseVal' && enterpriseVal=='wrongEntValue'" style="color: #FF0000">Enterprise
+							name should not contain any special characters.</div>
+					</div>
+				</div>
+
+				<!-- ROLE -->
+				<div class="form-group" style="overflow: auto;">
+					<label class="col-md-3 noMargin">Role</label>
+					<div class="col-md-8">
+						<select class="form-control" ng-model="user.role" ng-init="user.role='Select Role..'">
+							<option >Select Role..</option>
+							<option value="MC Root">MC Admin</option>
+						</select>
+						<div ng-if="emptyCol=='Role' && user.role=='Select Role..'"
+							style="color: #FF0000">Please select the Role type.</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

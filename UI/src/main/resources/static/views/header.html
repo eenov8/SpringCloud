@@ -1,0 +1,22 @@
+<a href="#menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></a>
+<h2>eat.rest.code</h2>
+<div class="dropdown">
+	<a ng-click="toggleAccountMenu = !toggleAccountMenu;" class="account">{{userName}}<img
+		class="pull-right" ng-src="{{userAccountIcon}}" /></a>
+	<div ng-show="toggleAccountMenu" class="submenu">
+		<ul class="root">
+			<li><a href="javascript:void(0)" class="text-right"><strong
+					class="pull-left"><img class="margin-right-5" src="images/icons/role.png" />Role</strong>{{userRole}}</a></li>
+			<li ng-click="logOut()"><a href="javascript:void(0)"><strong><img class="margin-right-5" src="images/icons/logout.png" />Logout</strong></a></li>
+		</ul>
+	</div>
+
+</div>
+
+
+<script>
+	$(".menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+</script>

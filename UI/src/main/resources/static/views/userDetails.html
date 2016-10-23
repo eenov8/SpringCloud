@@ -1,0 +1,66 @@
+<div class="container-fluid">
+	<h2>Users</h2>
+
+	<div class="col-md-12">
+		<i ng-click="exportToExcel('#userTable')"
+			class="fa fa-download font-24 padding-right-5 padding-bottom-10 pull-right"></i>
+		<i ng-click="filterOn = !filterOn"
+			class="fa fa-filter font-24 padding-right-5 padding-bottom-10 pull-right"></i>
+		<i ng-click="searchOn = !searchOn"
+			class="fa fa-search font-24 padding-right-5 padding-bottom-10 pull-right"></i>
+		<div class="padding-right-5 padding-bottom-10 pull-right">
+		<a class="addBtn paddingForButton" href="#/adduser">Add User</a>
+		</div>
+		<div ng-show="selectedRow != ''"
+			class="padding-right-5 padding-bottom-10 pull-right">
+			<div class="addBtn">
+				<a href="javascript:void(0)">Re Issue</a>
+			</div>
+		</div>
+
+	</div>
+
+	<form ng-show="searchOn" class="pull-right">
+		<div class="form-group">
+			<div class="input-group">
+				<div class="input-group-addon">
+					<i class="fa fa-search"></i>
+				</div>
+				<input type="text" class="form-control"
+					placeholder="Search Name" ng-model="searchUser">
+			</div>
+		</div>
+	</form>
+
+	<ul ng-show="filterOn" class="filterCols">
+		<li ng-repeat="c in all_columns"><input type="checkbox"
+			ng-model="c.checked"> {{ c.title | uppercase}}</li>
+	</ul>
+
+	<table ng-show="ordered_columns.length > 0" id="userTable" class="table table-bordered table-striped">
+		<thead>
+			<tr>
+
+				<td ng-repeat="header in ordered_columns"
+					ng-click="sort.type = header.title; sort.reverse = !sort.reverse"><a
+					href="javascript:void(0);"> {{header.title | uppercase}} <span
+						ng-show="sort.type = header.title &&  !sort.reverse"
+						class="fa fa-caret-down"></span> <span
+						ng-show="sort.type = header.title &&  sort.reverse"
+						class="fa fa-caret-up"></span>
+				</a></td>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr
+				ng-repeat="user in userList | orderBy:sort.type:sort.reverse | filter:searchUser">
+				<td ng-class="selectedRow == user.Email ? 'selectRow-td' : ''"
+					ng-click="selectRow(user.Email)" ng-repeat="c in ordered_columns">{{
+					user[c.title] }}</td>
+			</tr>
+		</tbody>
+
+	</table>
+	<div ng-show="ordered_columns.length == 0" class="col-md-12 text-center fa-2x">No Data available.</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="background">
+	<div class="modal-dialog" style="top: 5em">
+		<div class="modal-content">
+			<!-- Login header; //-->
+			<div class="header">
+				<h3>Eat.Rest.Code: Shopping Portal</h3>
+			</div>
+			<div class="modal-body"
+				style="overflow: auto;">
+				<form class="form col-md-12 center-block" method="post" action="">
+					<div id="div1" class="form-group iw-usr">
+						<div>
+							<input ng-keyup="$event.keyCode == 13 ? loginUser() : null"
+								ng-model="userId" id="" class="form-control" type="text"
+								value="" placeholder="Enter User Id">
+						</div>
+						<div ng-if="emptyCol=='User' && userId==''" style="color: #FF0000">*Please
+							enter User Id</div>
+					</div>
+					<div id="div2" class="form-group iw-pwd">
+						<input ng-model="password" id=""
+							ng-keyup="$event.keyCode == 13 ? loginUser() : null"
+							class="form-control" type="password" placeholder="Enter Password">
+
+						<div ng-if="emptyCol=='Password' && password==''"
+							style="color: #FF0000">*Please enter Password</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="form-actions" style="margin-top: 0em;">
+				<button ng-click="loginUser()" class="btn-primary" type="submit">Login</button>
+			</div>
+			<div ng-show="login404Error" style="color: #FF0000;margin-left: 5%;">*Server is not reachable</div>
+			<div ng-show="loginError" style="color: #FF0000; margin-left: 5%;">*{{errorMessage}}</div>
+		</div>
+	</div>
+</div>

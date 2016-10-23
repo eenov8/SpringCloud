@@ -1,0 +1,36 @@
+server:
+  port: 8003
+  
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8761/eureka/
+        healthcheck:
+            enabled: true
+        lease:
+            duration: 5
+logging:
+    file:
+        ${APP_HOME}/logs/ui_server.log
+
+spring:
+    application:
+      name: ui
+        
+ribbon:
+  ConnectTimeout: 
+    60000
+  ReadTimeout: 
+    600000
+  
+hystrix:
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: false
+                isolation:
+                    strategy: THREAD
+                    thread:
+                        timeoutInMilliseconds: 60000
+  

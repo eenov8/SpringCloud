@@ -1,0 +1,315 @@
+@import
+	url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext")
+	;
+
+* Global Styles * /
+html, body {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Lato', 'Open Sans', 'HelveticaNeue', 'Helvetica Neue',
+		Helvetica, Arial, sans-serif;
+	font: 13px/1.65em "Lato", Open Sans, "HelveticaNeue", "Helvetica Neue",
+		Helvetica, Arial, sans-serif;
+	color: #444;
+	-webkit-text-size-adjust: 100%;
+	height: 92vh;
+	background-color: rgba(201, 201, 201, 1);
+	padding: 0;
+	margin: 0;
+}
+
+.footer {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	height: 40px;
+	width: 100%; `
+	background-color: #161a1c;
+	color: #e4e6f0;
+	line-height: 40px;
+}
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 100;
+	text-align: center;
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.loader {
+	width: 100%;
+	margin-top: 20%;
+}
+
+.loader>span {
+	margin-right: 10px;
+}
+
+.margin-right-5 {
+	margin-right: 5px;
+}
+
+a:active, a:hover, a:focus {
+	text-decoration: none;
+}
+
+/*--Login--*/
+.background {
+	position: fixed !important;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(../images/some_background.PNG);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.form-content input[type="text"], .form-content input[type="password"] {
+	background: transparent none repeat scroll 0 0;
+	border: 0 none;
+	color: #333;
+	font-size: 14px;
+	height: 2.55em;
+	margin: 0 -30px;
+	padding: 4px 0 4px 30px;
+	width: 100%;
+	display: block;
+}
+
+.form-content button {
+	display: block;
+}
+
+.form-actions {
+	clear: both;
+	margin-top: 0.5em;
+	min-height: 44px;
+	overflow: auto;
+	padding-right: 140px;
+	position: relative;
+}
+
+.btn-primary {
+	background: rgba(0, 0, 0, 0)
+		linear-gradient(to bottom, #690070 0%, #690070 5%, #690070 95%, #690070
+		100%) repeat scroll 0 0;
+	border: 1px solid #2a1014;
+	border-radius: 4px;
+	box-shadow: 0 1px 0 0 #8F1E96 inset, 0 1px 0 0 #8F1E96;
+	color: #fbfbfb;
+	cursor: pointer;
+	display: block;
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+	height: 44px;
+	line-height: 20px;
+	margin-right: 10px;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	width: 130px;
+}
+
+.btn-primary:hover {
+	background: #8F1E96;
+	background: -moz-linear-gradient(top, #8F1E96 0%, #8F1E96 5%, #8F1E96 95%, #8F1E96
+		100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8F1E96),
+		color-stop(5%, #8F1E96), color-stop(95%, #8F1E96),
+		color-stop(100%, #8F1E96));
+	background: -webkit-linear-gradient(top, #8F1E96 0%, #8F1E96 5%, #8F1E96 95%,
+		#8F1E96 100%);
+	background: -o-linear-gradient(top, #8F1E96 0%, #8F1E96 5%, #8F1E96 95%, #8F1E96
+		100%);
+	background: -ms-linear-gradient(top, #8F1E96 0%, #8F1E96 5%, #8F1E96 95%, #8F1E96
+		100%);
+	background: linear-gradient(to bottom, #8F1E96 0%, #8F1E96 5%, #8F1E96 95%, #8F1E96
+		100%);
+}
+
+.btn-primary:active {
+	box-shadow: none;
+	background: #8F1E96;
+	border: 1px solid #913;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+a {
+	color: #55606e;
+	text-decoration: none;
+}
+
+.indus-logo {
+	display: block;
+	margin: auto;
+	text-indent: -9999em;
+	width: auto;
+}
+
+.modal-content {
+	background: #EEF3FA !important;
+	width: 85% !important;
+	padding: 10px 20px 1.5em 19px !important;
+	margin: auto !important;
+}
+
+.header {
+	background: transparent none repeat scroll 0 0;
+	border-bottom: 1px solid #E5D4E6;
+	margin: 0 0 0.5em;
+	padding: 14px 0 8px;
+}
+
+/*--Login--*/
+#mainContainer {
+	padding: 10px;
+}
+
+#mainContainer>.container-fluid {
+	background-color: white;
+	min-height: 664px;
+	height:auto;
+}
+
+#mainContainer>.container {
+	background-color: white;
+	height: inherit;
+}
+
+.fa {
+	cursor: pointer;
+}
+
+.font-24 {
+	font-size: 24px;
+}
+
+.padding-right-5 {
+	padding-right: 5px;
+}
+
+.padding-right-10 {
+	padding-right: 10px;
+}
+
+.padding-bottom-10 {
+	padding-bottom: 10px;
+}
+
+.padding-top-20 {
+	padding-top: 20px;
+}
+
+.table-striped>thead>tr {
+	height: 39px;
+	background-color: #e5e5e5;
+	font-weight: bold;
+	color: #4a4a4a;
+}
+
+.table-striped>tbody>tr:hover {
+	background-color: #deecff;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th,
+	.table>thead>tr>td, .table>thead>tr>th {
+	color: #6d6d6d;
+	font-size: 14px;
+}
+
+.addBtn {
+	height: 32px;
+	text-align: center;
+	border: 1px solid #cdcbcd;
+	line-height: 2;
+	border-radius: 3px;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.paddingForButton {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.account-label {
+	height: 32px;
+	width: 24px;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	padding-right: 5px;
+}
+
+.normal-font {
+	font-weight: normal;
+}
+
+.padding-lr-5 {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.selectRow-td {
+	background-color: #deecff;
+}
+
+.filterCols {
+	position: absolute;
+	right: 1%;
+	margin-top: 30px;
+	background: grey;
+	width: 150px;
+	list-style: none;
+	padding: 10px;
+	color: white;
+	z-index: 100;
+}
+
+#userForm .form-group {
+	width: 100%;
+	float: left;
+}
+
+#userForm  label {
+	float: left;
+	margin-right: 50px;
+}
+
+#userForm  .form-control {
+	width: 70%;
+	float: right;
+}
+
+.btn>a {
+	color: #fff !important;
+}
+
+.margin-right-10{
+	margin-right:10px;
+}
+
+.margin-bottom{
+	margin-bottom:10px;
+}
+
+.noMargin {
+	margin:0 !important
+}
+
+.infoMsg{
+	color : #FF0000;
+}

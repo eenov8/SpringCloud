@@ -1,0 +1,194 @@
+/*
+ * Table
+ */
+table.dataTable {
+	margin: 0 auto;
+	clear: both;
+	width: 100%;
+}
+
+table.dataTable thead tr {
+	height: 39px;
+	background-color: #e5e5e5;
+	font-weight: bold;
+	color: #4a4a4a;
+}
+
+table.dataTable thead th {
+	padding: 3px 18px 3px 10px;
+	border-bottom: 0;
+	font-weight: bold;
+	cursor: pointer;
+	color: #6d6d6d;
+	font-size: 14px;
+}
+
+table.dataTable tfoot th {
+	padding: 3px 18px 3px 10px;
+	border-top: 1px solid black;
+	font-weight: bold;
+}
+
+table.dataTable td {
+	color: #6d6d6d;
+	font-size: 14px;
+	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: top;
+}
+
+table.dataTable td.center, table.dataTable td.dataTables_empty {
+	text-align: center;
+}
+
+table.dataTable tr.odd {
+	background-color: #f9f9f9;
+}
+
+table.dataTable tr.even {
+	background-color: white;
+}
+
+/*
+ * Table wrapper
+ */
+.dataTables_wrapper {
+	position: relative;
+	clear: both;
+	*zoom: 1;
+}
+
+/*
+ * Page length menu
+ */
+.dataTables_length {
+	float: left;
+}
+
+/*
+ * Filter
+ */
+.dataTables_filter {
+	float: right;
+	text-align: right;
+}
+
+/*
+ * Table information
+ */
+.dataTables_info {
+	clear: both;
+	float: left;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter,
+	.dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing,
+	.dataTables_wrapper .dataTables_paginate {
+	color: #585858;
+}
+
+.dataTables_wrapper .dataTables_info {
+	margin-left: 1em;
+	color: #6d6d6d;
+	font-size: 14px;
+}
+
+/* ---------------------------------------- */
+/* PAGINATION */
+/* ---------------------------------------- */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+	.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover
+	{
+	color: white !important;
+	border: none;
+	background: #D6D6D6;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	padding: 0.3em 0.8em;
+}
+
+/*
+ * Processing indicator
+ */
+.dataTables_processing {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 30px;
+	margin-left: -125px;
+	margin-top: -15px;
+	padding: 14px 0 2px 0;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 14px;
+	background-color: white;
+}
+
+/*
+ * Sorting
+ */
+.sorting {
+	background: url('../images/sort_both.png') no-repeat center right;
+}
+
+.sorting_asc {
+	background: url('../images/sort_asc.png') no-repeat center right;
+}
+
+.sorting_desc {
+	background: url('../images/sort_desc.png') no-repeat center right;
+}
+
+.sorting_asc_disabled {
+	background: url('../images/sort_asc_disabled.png') no-repeat center
+		right;
+}
+
+.sorting_desc_disabled {
+	background: url('../images/sort_desc_disabled.png') no-repeat center
+		right;
+}
+
+table.dataTable th:active {
+	outline: none;
+}
+
+/*
+ * Scrolling
+ */
+.dataTables_scroll {
+	clear: both;
+}
+
+.dataTables_scrollBody {
+	*margin-top: -1px;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter,
+	.dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing,
+	.dataTables_wrapper .dataTables_paginate {
+	color: #585858;
+}
+
+.dataTables_wrapper .dataTables_info {
+	margin-left: 1rem;
+}
+
+/* ---------------------------------------- */
+/* PAGINATION */
+/* ---------------------------------------- */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+	.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover
+	{
+	color: white !important;
+	border: none;
+	background: #D6D6D6;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	padding: 0.3em 0.8em;
+	cursor: pointer;
+}
