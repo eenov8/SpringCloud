@@ -3,6 +3,10 @@ Cloud application using Spring Cloud and Netflix OSS.
 
 End Goal: Intent is to create a scalable distributed architecture powered by the micro services framework provided by the Spring. At the end, deliverable will be a b2b commerce portal running over MongoDB as the database.
 
+To run the code, pull it and for every project run - 
+
+mvn clean package
+
 Major components are -
 
 1. Eureka Server that will be running on 8761 port.
