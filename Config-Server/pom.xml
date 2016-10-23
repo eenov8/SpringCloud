@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>Config-Server</name>
-	<description>Spring CLoud Configuration Manager</description>
+	<description>Spring Cloud Configuration Manager</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

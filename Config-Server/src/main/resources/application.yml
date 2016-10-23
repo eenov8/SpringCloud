@@ -1,9 +1,27 @@
 server:
-  port: 8001
+  port: 8888
+management:
+  context_path: /admin
 
+info:
+  component: Config Server
 spring:
+  application:
+    name: configserver
+  jmx:
+    default_domain: cloud.config.server
   cloud:
     config:
       server:
         git:
-          uri: file:///${user.home}/config-repo
+          uri: https://github.com/spring-cloud-samples/config-repo
+          repos:
+            default: https://github.com/spring-cloud-samples/config-repo
+
+
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: file:///${user.home}/config-repo
