@@ -16,7 +16,7 @@ logging:
 
 spring:
     application:
-      name: usermanager
+      name: officeinvmanager
     data:   
         mongodb:
             host: localhost

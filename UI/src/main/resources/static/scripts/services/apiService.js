@@ -18,32 +18,21 @@ ercModule
 				 execute : function(type, args, cb) {
 					 var apiData = {};
 					 switch (type) {
-					 case 'login': {
-						 apiData.url = "http://localhost:8001/usermanager/EatRest/User/authenticate";
-						 apiData.type = "POST";
-						 break;
-					 }
-					 case 'getUsers': {
-						 apiData.url = "https://localhost:8004/fetchUsers";
-						 apiData.type = "GET";
-						 break;
-					 }
-					 case 'getRoles': {
-						 apiData.url = config.apiServer()
-						 + "roles/fetchAll";
-						 apiData.type = "GET";
-						 break;
-					 }
-					 case 'createUser': {
-						 apiData.url = "https://localhost:8004/addUser";
-						 apiData.type = "POST";
-						 break;
-					 }
-					 case 'fetchCSPAccount': {
-						 apiData.url = "https://localhost:8006/CSP/Account/fetchCSPAccounts";
-						 apiData.type = "GET";
-						 break;
-					 }
+						 case 'login': {
+							 apiData.url = "http://localhost:8001/usermanager/EatRest/User/authenticate";
+							 apiData.type = "POST";
+							 break;
+						 }
+						 case 'getProducts': {
+							 apiData.url = "http://localhost:8001/officeinvmanager/fetchInventory";
+							 apiData.type = "GET";
+							 break;
+						 }
+						 case 'createUser': {
+							 apiData.url = "https://localhost:8004/addUser";
+							 apiData.type = "POST";
+							 break;
+						 }
 					 }
 					 var xhr = $http({
 						 method : apiData.type,
